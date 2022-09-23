@@ -62,7 +62,7 @@ resource "azurerm_resource_group" "tfstate" {
 }
 
 module "tfbackend-azure" {
-  source   = "git::https://github.com/Optum/tfbackend-azure.git?ref=main"
+  source   = "git::https://github.com/Optum/tfbackend-azure.git?ref=master"
 
   resource_group_name = azurerm_resource_group.tfstate.name
   location            = azurerm_resource_group.tfstate.location
@@ -85,7 +85,7 @@ resource "azurerm_storage_account" "tfstate" {
 }
 
 module "tfbackend-azure" {
-  source   = "git::https://github.com/Optum/tfbackend-azure.git?ref=main"
+  source   = "git::https://github.com/Optum/tfbackend-azure.git?ref=master"
 
   resource_group_name  = azurerm_resource_group.tfstate.name
   storage_account_name = azurerm_storage_account.tfstate.name
